@@ -52,6 +52,9 @@ export class PhotoEditorComponent implements OnInit {
           description: res.description
         };
         this.photos.push(photo);
+        if (photo.isMain) {
+          this.memberMainPhotoChange.emit(photo.url);
+        }
       }
     };
   }

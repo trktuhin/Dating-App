@@ -39,9 +39,9 @@ export class MemberEditComponent implements OnInit {
       this.alertify.error(error);
     });
   }
-  mainPhotoChange(photoUrl){
+  mainPhotoChange(photoUrl) {
     this.authService.changeMemberPhoto(photoUrl);
     this.authService.currentUser.photoUrl = photoUrl;
-    localStorage.setItem('user',JSON.stringify(this.authService.currentUser));
+    localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
   }
 }
